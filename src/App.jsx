@@ -6,9 +6,9 @@ import Herosection from './Components/Herosection'
 import Contact from './Components/Contact'
 import { BrowserRouter,Routes,Route} from "react-router-dom";
 import About from './Components/About';
-import projects from './Components/projects';
 import Services from './Components/Services';
 import Footer from './pages/Footer';
+import Projects from './Components/Projects';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
       <Route path='/herosection' Component={Herosection}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/contact' Component={Contact}/>
-      <Route path='/pro' Component={projects}/>
+      <Route path='/pro' Component={Projects}/>
       <Route path='/services' Component={Services}/>
     </Routes>
     <Footer/>
