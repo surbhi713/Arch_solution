@@ -16,6 +16,7 @@ function App() {
     <BrowserRouter>
     <Header/>
     <Routes>
+      <Route path='/' Component={Herosection}/>
       <Route path='/herosection' Component={Herosection}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/contact' Component={Contact}/>
