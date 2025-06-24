@@ -66,3 +66,66 @@ export const service =[{
     desc:'jfbhjkebvjk',
     image: bg
 }]
+
+export const projects = [
+  {
+    id: 1,
+    title:'Home Interiors',
+    thumbnail: bg
+  },
+  {
+    id: 2,
+    title: 'Branding',
+    thumbnail: bg
+  },
+  {
+    id: 3,
+    title: 'ATM Renovation',
+    thumbnail:bg
+  },
+  {
+    id: 4,
+    title: "Interior Wood Work",
+    thumbnail:bg
+  },
+  {
+    id: 5,
+    title: "Infrastructure",
+    thumbnail: bg
+  },
+  {
+    id: 6,
+    title: "Floor Designing",
+    thumbnail: bg
+  },
+  {
+    id: 7,
+    title: "LED Signage",
+    thumbnail: bg
+  },
+  {
+    id: 8,
+    title: "Notice Board",
+    thumbnail: bg
+  },
+  {
+    id: 9,
+    title: "SS Letter",
+    thumbnail: bg
+  },
+  {
+    id: 10,
+    title: "School Work",
+    thumbnail: bg
+  },
+  {
+    id: 11,
+    title: "ACP Cladding",
+    thumbnail: bg
+  },
+  {
+    id: 12,
+    title: "Notice Board",
+    thumbnail: bg
+  }
+];
