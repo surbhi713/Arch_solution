@@ -1,38 +1,48 @@
-import React, { useEffect } from 'react'
-import Aos from 'aos'
-import bg from '../assets/bg.avif'
-function About() {
+import React, { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import bg from '../assets/sbi borad.jpg';
 
-  useEffect(()=>{
+function About() {
+  useEffect(() => {
     Aos.init({
-      duration:800,
-      offset:200,
-      delay:100,
-      easing:'ease-in-sine'
-    })
-  },[])
+      duration: 800,
+      offset: 200,
+      delay: 100,
+      easing: 'ease-in-sine'
+    });
+  }, []);
 
   return (
-    <div className='flex items-center justify-center bg-cover bg-center  min-h-screen' style={{backgroundImage:`url(${bg})`}}>
-   <div id='about_div' 
-     className='justify-center items-center 
-                w-[90%] md:w-[70%] lg:w-[50%] 
-                  mt-0 py-10 px-10  flex flex-col rounded-xl
-                bg-zinc-800 bg-opacity-50 
-                border border-gray-700' data-aos="zoom-in">
+    <div
+      className="relative flex items-center justify-center min-h-screen bg-cover bg-center"
+      style={{ backgroundImage: `url(${bg})` }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm z-0"></div>
 
-        <h2 className='lg:text-5xl md:text-4xl text-3xl
-      mb-10 font-serif' >About Us</h2>
-      <p className=' font-serif
-        '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui impedit id atque voluptatibus
-         labore earum non nemo similique, natus quo tenetur laboriosam porro itaque ipsum error ipsam unde, illum dolorum!
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, recusandae perferendis neque facere officia
-          commodi sequi cupiditate deleniti maxime aut obcaecati fuga similique, voluptate repudiandae doloribus. Officia quas aliquid dignissimos?
-         Nihil temporibus ea libero consequatur tempora quasi asperiores in recusandae velit quia, nulla veritatis ratione
-        tempore laborum expedita unde? Voluptatem, rerum odio. Deleniti repellat quae, ipsum amet dicta saepe nesciunt!</p>
+      {/* Content */}
+      <div
+        id="about_div"
+        className="relative z-10 w-[90%] md:w-[75%] lg:w-[50%] bg-zinc-800 bg-opacity-60 border border-gray-700 
+                   rounded-xl py-10 px-6 sm:px-10 flex flex-col justify-center items-center text-white"
+        data-aos="zoom-in"
+      >
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold mb-8 text-center">
+          About Us
+        </h2>
+
+        <p className="text-sm sm:text-base font-serif leading-relaxed text-center text-gray-200">
+          Arch Complete Solution is committed to designing spaces that inspire. 
+          We bring innovation, elegance, and function together to create architectural marvels tailored to your needs.
+          <br /><br />
+          With a team of passionate architects and visionaries, we ensure every structure stands out—blending modern technology 
+          with artistic creativity. Whether it's a residential villa, commercial hub, or conceptual structure, 
+          we make your ideas come to life, beautifully and sustainably.
+        </p>
       </div>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;

@@ -21,7 +21,7 @@ function Header() {
 
         {/* Logo */}
         <div id='logo'>
-          <img src={logo} alt="company logo" className='w-[120px] rounded-md lg:w-[150px]' />
+          <img src={logo} alt="company logo" className='w-[120px] rounded-md lg:w-[150px] invert' />
         </div>
 
         {/* Desktop Nav */}
