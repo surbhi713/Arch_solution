@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import bg from '../assets/bg.avif'
+import bg from '../../public/assets/bg.avif'
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import Aos from "aos";
 import emailjs from '@emailjs/browser';
