@@ -1,7 +1,7 @@
 import React from 'react';
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import img from '../assets/school board.jpg';
+import img from '../assets/sbi borad.jpg';
 
 function Herosection() {
   useGSAP(() => {
