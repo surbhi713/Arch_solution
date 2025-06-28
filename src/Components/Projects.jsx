@@ -33,47 +33,46 @@ function Projects() {
   };
 
   return (
-    <div className='flex flex-col justify-center items-center min-h-screen px-4 py-10'>
+    <div className='flex flex-col justify-center items-center min-h-screen px-4 py-10 bg-white'>
 
       {/* Header */}
-      <div className='bg-zinc-900 border border-zinc-700 rounded-2xl shadow-lg w-full max-w-5xl px-6 sm:px-10 py-16 sm:py-20 flex flex-col items-center gap-6'>
+      <div className='bg-gray-100 border border-gray-300 rounded-2xl shadow-lg w-full max-w-5xl px-6 sm:px-10 py-16 sm:py-20 flex flex-col items-center gap-6'>
         <h1
           id='head'
           className='text-3xl sm:text-4xl md:text-5xl font-bold font-serif opacity-0 translate-y-10 text-center 
-          bg-clip-text text-transparent bg-gradient-to-r from-pink-200 via-pink-400 to-pink-900'
+          bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-pink-600 to-pink-800'
         >
           Our Projects
         </h1>
         <p
           id='para'
-          className='text-sm sm:text-base md:text-lg text-gray-400 opacity-0 translate-x-10 leading-relaxed text-center px-2 sm:px-8'
+          className='text-sm sm:text-base md:text-lg text-gray-700 opacity-0 translate-x-10 leading-relaxed text-center px-2 sm:px-8'
         >
           Discover our diverse portfolio, showcasing everything from luxury villas to sustainable urban developments. Each project reflects our dedication to architectural excellence and client satisfaction.
         </p>
       </div>
 
       {/* Project Cards */}
-      <div className='mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
-       gap-6 sm:gap-8 py-10 max-w-6xl w-full px-2 sm:px-4'>
+      <div className='mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 py-10 max-w-6xl w-full px-2 sm:px-4'>
         {projects.map((project) => (
           <div
             key={project.id}
             className="project-card group relative p-[1px] rounded-xl
-                     bg-gradient-to-tr from-pink-500 via-purple-500 to-indigo-500
+                     bg-gradient-to-tr from-pink-400 via-purple-400 to-indigo-400
                      transition-transform duration-300 hover:scale-[1.03] 
                      opacity-0 translate-y-10 shadow-xl cursor-pointer"
             onClick={() => setSelectedProject(project)}
           >
-            <div className="bg-zinc-900 rounded-xl h-full p-4 flex flex-col gap-3">
+            <div className="bg-white rounded-xl h-full p-4 flex flex-col gap-3 border border-gray-200">
               <img
                 src={project.thumbnail}
                 alt={`${project.title} Thumbnail`}
-                className="w-full h-40 sm:h-48 object-cover rounded-lg border border-zinc-700 mb-2"
+                className="w-full h-40 sm:h-48 object-cover rounded-lg border border-gray-300 mb-2"
               />
-              <h2 className="text-lg sm:text-xl font-semibold text-white text-center group-hover:text-pink-400 transition-colors">
+              <h2 className="text-lg sm:text-xl font-semibold text-black text-center group-hover:text-pink-600 transition-colors">
                 {project.title}
               </h2>
-              <p className="text-gray-400 text-sm text-center leading-relaxed">
+              <p className="text-gray-600 text-sm text-center leading-relaxed">
                 Click to view gallery
               </p>
             </div>
@@ -83,11 +82,11 @@ function Projects() {
 
       {/* Modal with Carousel */}
       {selectedProject && (
-        <div className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-2 sm:p-6 overflow-auto'>
-          <div className='bg-zinc-900 text-white rounded-xl p-4 sm:p-6 max-w-3xl w-full relative'>
+        <div className='fixed inset-0 z-50 flex items-center justify-center bg-white bg-opacity-70 p-2 sm:p-6 overflow-auto'>
+          <div className='bg-white text-black rounded-xl p-4 sm:p-6 max-w-3xl w-full relative border border-gray-300 shadow-lg'>
             <button
               onClick={closeModal}
-              className='absolute top-2 right-4 text-gray-400 hover:text-white text-3xl font-bold'
+              className='absolute top-2 right-4 text-gray-600 hover:text-black text-3xl font-bold'
             >
               &times;
             </button>
@@ -102,7 +101,7 @@ function Projects() {
                   <img
                     src={`/assets/project${selectedProject.id}/img${i + 1}.jpg`}
                     alt={`Project ${selectedProject.id} Image ${i + 1}`}
-                    className='w-full h-[280px] sm:h-[350px] md:h-[400px] object-cover rounded-lg border border-zinc-700'
+                    className='w-full h-[280px] sm:h-[350px] md:h-[400px] object-cover rounded-lg border border-gray-300'
                     loading='lazy'
                   />
                 </div>

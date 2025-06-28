@@ -24,11 +24,13 @@ function About() {
       {/* Content */}
       <div
         id="about_div"
-        className="relative z-10 w-[90%] md:w-[75%] lg:w-[50%] bg-zinc-800 bg-opacity-60 border border-gray-700 
+        className="relative z-10 w-[90%] md:w-[75%] lg:w-[50%] bg-zinc-700 bg-opacity-60 border border-gray-700 
                    rounded-xl py-10 px-6 sm:px-10 flex flex-col justify-center items-center text-white"
         data-aos="zoom-in"
       >
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold mb-8 text-center">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold mb-8 text-center
+        bg-clip-text text-transparent
+        bg-gradient-to-r from-black via-rose-700 to-rose-400">
           About Us
         </h2>
 
