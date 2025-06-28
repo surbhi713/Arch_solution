@@ -1,15 +1,15 @@
-import school from '../../public/assets/school board.jpg';
-import interior from '../../public/assets/kitchen interior.jpg'
-import banking from '../../public/assets/banking.jpg'
-import flooring from '../../public/assets/flooring.jpg'
-import home from '../../public/assets/Home interior.jpg'
-import infra from '../../public/assets/almira.jpg'
-import ssletter from '../../public/assets/fan.jpg'
-import acp from '../../public/assets/Wooden work.jpg'
-import schoolwork from '../../public/assets/school work.jpg'
-import led from '../../public/assets/ambulance.jpg'
-import notice from '../../public/assets/ambulance.jpg'
-import bg from '../../public/assets/bg.avif'
+import school from '../assets/school-board.jpg';
+import interior from '../assets/kitchen-interior.jpg'
+import banking from '../assets/banking.jpg'
+import flooring from '../assets/flooring.jpg'
+import home from '../assets/home-interior.jpg'
+import infra from '../assets/almira.jpg'
+import ssletter from '../assets/fan.jpg'
+import acp from '../assets/wooden-work.jpg'
+import schoolwork from '../assets/school-work.jpg'
+import led from '../assets/ambulance.jpg'
+import notice from '../assets/school.jpg'
+import bg from '../assets/bg.avif'
 
 export const service =[{
     name:'Home Interiors',
