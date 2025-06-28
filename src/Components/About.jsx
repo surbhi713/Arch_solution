@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import bg from '../assets/interior.JPG';
+import interior from '../assets/interior.jpg';
 
 function About() {
   useEffect(() => {
@@ -16,7 +16,7 @@ function About() {
   return (
     <div
       className="relative flex items-center justify-center min-h-screen bg-cover bg-center"
-      style={{ backgroundImage: `url(${bg})` }}
+      style={{ backgroundImage: `url(${interior})` }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm z-0"></div>
