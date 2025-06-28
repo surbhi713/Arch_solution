@@ -31,10 +31,12 @@ function Services() {
   }, []);
 
   return (
-    <div className="bg-black min-h-screen w-full flex flex-col px-6 py-10 text-center space-y-6 items-center justify-center">
+    <div className="bg-black min-h-screen w-full flex flex-col mb-10
+    px-6 py-10 text-center space-y-6 items-center justify-center">
       {/* Heading & Description */}
       <div
-        className="bg-zinc-900 bg-opacity-70 p-10 rounded-2xl mt-10 shadow-lg w-full max-w-4xl border border-zinc-700"
+        className="bg-zinc-900 bg-opacity-70 p-10 
+        rounded-2xl mt-10 shadow-lg w-full max-w-4xl border border-zinc-700"
       >
         <h1
           id="head"
@@ -52,11 +54,13 @@ function Services() {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full mb-10 max-w-6xl">
         {service.map((item, index) => (
           <div
             key={index}
-            className="card bg-zinc-800 rounded-xl shadow-md border border-zinc-700 text-white cursor-pointer hover:scale-105 transition-transform duration-300"
+            className="card bg-zinc-800 rounded-xl 
+            shadow-md border border-zinc-700 text-white cursor-pointer
+             hover:scale-105 transition-transform duration-300"
           >
             <img
               src={item.image}

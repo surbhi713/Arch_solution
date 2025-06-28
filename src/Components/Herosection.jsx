@@ -1,7 +1,7 @@
 import React from 'react';
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import img from '../assets/sbi-board.JPG';
+import img from '../assets/interior.JPG';
 
 function Herosection() {
   useGSAP(() => {
@@ -29,7 +29,7 @@ function Herosection() {
       style={{ backgroundImage: `url(${img})` }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-black/80"></div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center text-white max-w-4xl">

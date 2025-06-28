@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import bg from '../assets/sbi-board.jpg';
+import bg from '../assets/interior.JPG';
 
 function About() {
   useEffect(() => {
