@@ -30,7 +30,7 @@ function About() {
       >
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold mb-8 text-center
         bg-clip-text text-transparent
-        bg-gradient-to-r from-black via-rose-700 to-rose-400">
+        bg-gradient-to-r from-white via-rose-400 to-rose-400">
           About Us
         </h2>
 

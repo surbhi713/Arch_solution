@@ -55,17 +55,18 @@ function Services() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full mb-10 max-w-6xl">
         {service.map((item, index) => (
           <div
-            key={index}
-            className="card bg-white rounded-xl shadow-sm border 
-            border-indigo-100 hover:shadow-xl cursor-pointer transition-transform
-             hover:scale-105 duration-300"
+          key={index}
+          className="card bg-white rounded-xl shadow-sm border 
+          border-indigo-100 hover:shadow-xl cursor-pointer transition-transform
+          hover:scale-105 duration-300"
           >
             <img
               src={item.image}
               alt={item.name}
               loading="lazy"
-              className="w-full h-52 object-cover rounded-t-xl"
+              className="w-full h-52 object-cover rounded-t-xl "
             />
+          
             <div className="p-5">
               <h2 className="text-xl font-semibold text-slate-800 mb-2">{item.name}</h2>
               <p className="text-slate-600 text-sm">{item.desc}</p>

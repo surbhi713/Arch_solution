@@ -76,7 +76,7 @@ export const projects = [
   {
     id: 1,
     title: "Project 1",
-    thumbnail: "/assets/project1/img1.jpg"
+    thumbnail: "/assets/project1/img1.JPG"
   },
   {
     id: 2,
@@ -122,5 +122,40 @@ export const projects = [
     id: 10,
     title: "Project 10",
     thumbnail: "/assets/project10/img1.jpg"
+  }
+];
+
+// ../const/imagmap.js
+
+export const previewProjects = [
+  {
+    id: 1,
+    title: 'Home Interior',
+    img: '/assets/projectPreview/img1.JPG'
+  },
+  {
+    id: 2,
+    title: 'ATM Renovation',
+    img: '/assets/projectPreview/img2.JPG'
+  },
+  {
+    id: 3,
+    title: 'LED Signage',
+    img: '/assets/projectPreview/img3.JPG'
+  },
+  {
+    id: 4,
+    title: 'Floor Designing',
+    img: '/assets/projectPreview/img4.JPG'
+  },
+  {
+    id: 5,
+    title: 'Branding',
+    img: '/assets/projectPreview/img5.JPG'
+  },
+  {
+    id: 6,
+    title: 'School Interior',
+    img: '/assets/projectPreview/img6.JPG'
   }
 ];

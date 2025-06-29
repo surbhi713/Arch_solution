@@ -3,8 +3,6 @@ import interior from '../assets/kitchen-interior.JPG'
 import banking from '../assets/banking.JPG'
 import flooring from '../assets/flooring.JPG'
 import home from '../assets/home-interior.JPG'
-import infra from '../assets/almira.JPG'
-import ssletter from '../assets/fan.JPG'
 import acp from '../assets/wooden-work.JPG'
 import schoolwork from '../assets/school-work.JPG'
 import led from '../assets/ambulance.JPG'
@@ -17,55 +15,42 @@ export const service =[{
     image: home
 },
 {
-    name:'Interior Wood Work',
+    name:'Branding',
     desc:'jfbhjkebvjk',
     image: interior
 },
 {
-    name:'Infrastructure',
+    name:'ATM Renovation',
     desc:'jfbhjkebvjk',
-    image: infra
+    image: school
 },
 {
-    name:'Branding',
+    name:'Flooring',
     desc:'Branding creates a distinct identity for a business in the minds of your target audience and the general population',
     image: schoolwork
-},
-{
-    name:'Floor Designing',
-    desc:'jfbhjkebvjk',
-    image: flooring
 },
 {
     name:'LED Singage',
     desc:'jfbhjkebvjk',
     image: led
 },
+
 {
-    name:'Notice Board',
+    name:'Partition',
     desc:'jfbhjkebvjk',
-    image: notice
-},
-{
-    name:'ACP Cladding',
-    desc:'jfbhjkebvjk',
-    image: acp
-},
-{
-    name:'Atm Renovation',
-    desc:'jfbhjkebvjk',
-    image: banking
-},
-{
-    name:'SS Letter',
-    desc:'jfbhjkebvjk',
-    image: ssletter
+    image: led
 },
 {
     name:'School Work',
     desc:'jfbhjkebvjk',
     image: school
-}]
+},
+{
+    name:'Bank Furniture',
+    desc:'jfbhjkebvjk',
+    image: school
+},
+]
 
 export const projects = [
   {
@@ -85,12 +70,12 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Interior Wood Work",
+    title: "Partition",
     thumbnail:bg
   },
   {
     id: 5,
-    title: "Infrastructure",
+    title: "Bank Furniture",
     thumbnail: bg
   },
   {
@@ -104,28 +89,9 @@ export const projects = [
     thumbnail: bg
   },
   {
-    id: 8,
-    title: "Notice Board",
-    thumbnail: bg
-  },
-  {
-    id: 9,
-    title: "SS Letter",
-    thumbnail: bg
-  },
-  {
     id: 10,
     title: "School Work",
     thumbnail: bg
   },
-  {
-    id: 11,
-    title: "ACP Cladding",
-    thumbnail: bg
-  },
-  {
-    id: 12,
-    title: "Notice Board",
-    thumbnail: bg
-  }
+
 ];
