@@ -186,7 +186,7 @@ function Herosection() {
                 ></video>
 
                 <video
-                  src="/assets/about1.MOV"
+                  src="/assets/about2.MP4"
                   controls
                   muted
                   className="rounded-xl shadow-lg w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover"
