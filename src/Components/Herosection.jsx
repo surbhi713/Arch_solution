@@ -10,49 +10,11 @@ import img1 from '../assets/school-work.JPG';
 import bg from '../assets/bg.avif';
 import { previewProjects } from '../const/imageMap';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Herosection() {
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
-
-  function handleInput(e) {
-    const { name, value } = e.target;
-    setForm((prev) => ({
-      ...prev,
-      [name]: value
-    }));
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-
-    const serviceId = "service_ekpvvpj";
-    const publicKey = "7XjhAJlPqIRp0ZwM-";
-    const templateId_to_client = "template_d7lt29e";
-    const templateId_to_me = "template_jfw5ydv";
-
-    const templateParams = {
-      name: form.name,
-      email: form.email,
-      phone: form.phone,
-      message: form.message,
-      to_email: 'manavagnihotri13@gmail.com',
-    };
-
-    emailjs.send(serviceId, templateId_to_client, templateParams, publicKey)
-      .then(() => alert('Thank You! Your form has been submitted Successfully!'))
-      .catch((err) => alert('OOPS! Error in submitting form: ' + err.text));
-
-    emailjs.send(serviceId, templateId_to_me, templateParams, publicKey)
-      .then(() => console.log('Email sent to self'))
-      .catch((err) => console.log('Error sending to self:', err.text));
-  }
 
   useEffect(() => {
     Aos.init({
@@ -73,13 +35,13 @@ function Herosection() {
       duration: 2,
     });
 
-    gsap.from('#bg-cover', {
-      yoyo: true,
-      repeat: -1,
-      y: 10,
-      duration: 2,
-      ease: 'sine.inOut',
-    });
+    // gsap.from('#bg-cover', {
+    //   yoyo: true,
+    //   repeat: -1,
+    //   y: 10,
+    //   duration: 2,
+    //   ease: 'sine.inOut',
+    // });
 
     gsap.from(headingRef.current, {
       y: -50,
@@ -101,16 +63,23 @@ function Herosection() {
       <div className="relative w-full min-h-[90vh] bg-cover bg-center flex items-center justify-center px-4 sm:px-8 md:px-12" style={{ backgroundImage: `url(${img})` }}>
         <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative z-10 text-center max-w-4xl w-full mt-12 sm:mt-16 md:mt-20 px-4">
-          <h1 id="text" className="text-transparent bg-clip-text font-serif bg-gradient-to-r from-white via-pink-500 to-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wide drop-shadow">
+        <div className="relative z-10 text-center max-w-4xl w-full mt-12 sm:mt-16 md:mt-20 px-4 ">
+          <h1 id="text" className="text-transparent bg-clip-text font-serif py-2
+           bg-gradient-to-r from-white via-pink-500 to-white text-3xl 
+           sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wide drop-shadow">
             Arch Complete Solution
           </h1>
-          <p className="mt-4 sm:mt-6 text-lg sm:text-xl lg:text-2xl font-serif bg-clip-text text-transparent bg-gradient-to-r from-white via-pink-600 to-black">
+          <p className="mt-4 sm:mt-6 text-lg 
+          sm:text-xl lg:text-2xl font-serif bg-clip-text text-transparent bg-gradient-to-r
+           from-white via-pink-600 to-black">
             We Create Beyond Your Imagination
           </p>
           <div className="mt-8 sm:mt-10 mx-auto w-full sm:w-[90%] md:w-[70%] lg:w-[60%] text-gray-700 border border-gray-300 rounded-xl p-5 sm:p-8 lg:p-10 bg-zinc-300 bg-opacity-90 shadow-lg">
             <p className="leading-relaxed text-sm sm:text-base font-semibold">
-              At Arch Complete Solution, we specialize in high-quality construction and interior design that blends style, functionality, and craftsmanship.
+             At Arch Complete Solution, we specialize in delivering high-quality construction and interior
+              design services that combine functionality, style, and craftsmanship. Whether you're building
+               from the ground up or transforming an existing space, our team is here to bring your vision
+                to life-on time and within budget.
             </p>
           </div>
         </div>
@@ -121,7 +90,9 @@ function Herosection() {
         <div className="text-gray-800 p-6 sm:p-8 lg:p-10">
           <h2 data-aos='fade-in' className="text-2xl sm:text-3xl lg:text-5xl font-semibold font-serif text-rose-500">Who We Are?</h2>
           <p className="mt-5 text-sm sm:text-base leading-relaxed font-semibold">
-            Founded in [Year], we are architects, designers, engineers, and project managers with decades of combined experience in residential, commercial, and hospitality projects. We bring excellence, creativity, and precision to every project.
+            Founded in 2005, we are architects, designers, engineers, and project managers
+             with decades of combined experience in residential, commercial, and hospitality projects. 
+             We bring excellence, creativity, and precision to every project.
           </p>
         </div>
         <div id="bg-cover" className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-full h-64 sm:h-80 md:h-[420px] bg-cover bg-center rounded-3xl mx-auto shadow-2xl" style={{ backgroundImage: `url(${img})` }}></div>
@@ -178,7 +149,7 @@ function Herosection() {
               <div className="w-full max-w-6xl mx-auto px-4 sm:px-8 md:px-12 
               py-12 grid grid-cols-1 md:grid-cols-2 gap-8">
                 <video
-                  src="/assets/about1.MOV"  // Use .MOV for better browser support
+                  src="/assets/project/about1.MOV"  // Use .mp4 for better browser support
                   controls
                   muted
                   className="rounded-xl shadow-lg w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover"
@@ -186,7 +157,7 @@ function Herosection() {
                 ></video>
 
                 <video
-                  src="/assets/about2.MP4"
+                  src="/assets/project/about2.MOV"
                   controls
                   muted
                   className="rounded-xl shadow-lg w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover"
@@ -194,66 +165,56 @@ function Herosection() {
                 ></video>
               </div>
 
-     {/* PROJECTS PREVIEW SECTION */}
-<div className="w-full max-w-6xl px-4 sm:px-8 md:px-12 py-14">
-  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-center text-pink-600 mb-10">
-    Our Projects
-  </h2>
+            {/* OUR PROJECTS AND SERVICES */}
+    <section className="py-20 bg-transparent px-10 w-full rounded-2xl 
+            m-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    {previewProjects.map((project) => (
-      <div
-        key={project.id}
-        className="group bg-white border border-gray-300 shadow-md rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300"
-      >
-        <img
-          src={project.img}
-          alt={project.title}
-          className="w-full h-48 object-cover"
-        />
-        <div className="p-4 text-center">
-          <h3 className="text-lg font-semibold text-gray-800 group-hover:text-pink-600 transition-colors">
-            {project.title}
-          </h3>
-        </div>
+  {/* Project Box */}
+  <div className="flex justify-center">
+    <Link to="/pro" className="w-full max-w-[500px]">
+      <div className="bg-zinc-100 bg-opacity-90 py-20
+       hover:scale-105 transition-transform duration-300 cursor-pointer
+        rounded-3xl shadow-xl p-6 sm:p-10 text-gray-800 w-full">
+        <h1 className="bg-gradient-to-r from-pink-500 to-black 
+        text-transparent font-bold bg-clip-text text-2xl sm:text-3xl md:text-4xl 
+        lg:text-5xl py-10 text-center">
+          Our Projects
+        </h1>
       </div>
-    ))}
+    </Link>
   </div>
-</div>
 
-
-      {/* CONTACT US SECTION */}
-      <div className="relative w-full px-4 sm:px-8 md:px-12 py-16 bg-cover bg-center text-white" style={{ backgroundImage: `url(${bg})` }}>
-        <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
-        <div className="relative z-10 max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold text-center text-white mb-12">Contact Us</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-2xl font-semibold flex items-center"><FaMapMarkerAlt className="text-red-500 mr-3" />Address</h3>
-                <p>29/6 A-1 Block, Bengali Colony, Burari, New Delhi - 110084, India</p>
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold flex items-center"><FaPhoneAlt className="text-red-500 mr-3" />Phone</h3>
-                <p>+91 9899992526, +91 9599162526</p>
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold flex items-center"><FaEnvelope className="text-red-500 mr-3" />Email</h3>
-                <p>archcs2010@gmail.com<br />manavagnihotri13@gmail.com</p>
-              </div>
-            </div>
-
-            <form onSubmit={handleSubmit} className="bg-white bg-opacity-10 backdrop-blur-md rounded-xl p-8 space-y-4 shadow-2xl">
-              <h3 className="text-xl font-semibold text-white mb-4">Send us a message</h3>
-              <input type="text" name="name" required onChange={handleInput} value={form.name} placeholder="Your Name" className="w-full p-3 rounded-lg bg-white bg-opacity-20 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-red-500" />
-              <input type="email" name="email" required onChange={handleInput} value={form.email} placeholder="Your Email" className="w-full p-3 rounded-lg bg-white bg-opacity-20 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-red-500" />
-              <input type="tel" name="phone" required onChange={handleInput} value={form.phone} placeholder="Your Phone" className="w-full p-3 rounded-lg bg-white bg-opacity-20 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-red-500" />
-              <textarea name="message" required onChange={handleInput} value={form.message} rows="4" placeholder="Your Message" className="w-full p-3 rounded-lg bg-white bg-opacity-20 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
-              <button type="submit" className="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-black hover:scale-105 transition duration-300">Send Message</button>
-            </form>
-          </div>
-        </div>
+  {/* Services Box */}
+  <div className="flex justify-center">
+    <Link to="/services" className="w-full max-w-[500px]">
+      <div className="bg-zinc-100 bg-opacity-90 py-20 
+      hover:scale-105 transition-transform duration-300 cursor-pointer 
+      rounded-3xl shadow-xl p-6 sm:p-10 text-gray-800 w-full">
+        <h1 className="bg-gradient-to-r from-pink-500 to-black 
+        text-transparent font-bold bg-clip-text text-2xl sm:text-3xl md:text-4xl 
+        lg:text-5xl py-10 text-center">
+          Our Services
+        </h1>
       </div>
+    </Link>
+  </div>
+
+  <div className="flex justify-center">
+    <Link to="/contact" className="w-full max-w-[500px]">
+      <div className="bg-zinc-100 bg-opacity-90 py-20
+       hover:scale-105 transition-transform duration-300 cursor-pointer
+        rounded-3xl shadow-xl p-6 sm:p-10 text-gray-800 w-full">
+        <h1 className="bg-gradient-to-r from-pink-500 to-black 
+        text-transparent font-bold bg-clip-text text-2xl sm:text-3xl md:text-4xl 
+        lg:text-5xl py-10 text-center">
+         Contact Us
+        </h1>
+      </div>
+    </Link>
+  </div>
+
+</section>
+
 
 
 

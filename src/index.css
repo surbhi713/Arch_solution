@@ -12,3 +12,12 @@ body{
     color:white;
 
 }
+
+
+/* Change slick arrow color */
+.slick-prev:before,
+.slick-next:before {
+  color: #ec4899; /* Tailwind's pink-500 */
+  font-size: 30px; /* Optional: increase size */
+  opacity: 1 ; /* Ensure it's visible */
+}

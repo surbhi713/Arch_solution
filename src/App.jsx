@@ -1,32 +1,37 @@
-import React from 'react'
-import AOS from 'aos'
+import React from 'react';
+import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Header from './pages/Header'
-import Herosection from './Components/Herosection'
-import Contact from './Components/Contact'
-import { BrowserRouter,Routes,Route} from "react-router-dom";
+import Header from './pages/Header';
+import Herosection from './Components/Herosection';
+import Contact from './Components/Contact';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from './Components/About';
 import Services from './Components/Services';
 import Footer from './pages/Footer';
 import Projects from './Components/Projects';
-import ProjectDetails from './Components/ProjectDetails';
 
 function App() {
   return (
-    <BrowserRouter>
-    <Header/>
-    <Routes>
-      <Route path='/' Component={Herosection}/>
-      <Route path='/herosection' Component={Herosection}/>
-      <Route path='/about' element={<About/>}/>
-      <Route path='/contact' Component={Contact}/>
-      <Route path='/pro' Component={Projects}/>
-      <Route path='/project/:id' element={<ProjectDetails />} />
-      <Route path='/services' Component={Services}/>
-    </Routes>
-    <Footer/>
-    </BrowserRouter>
-  )
+    <div className="min-h-screen flex flex-col">
+      <BrowserRouter>
+        <Header />
+        
+        {/* Main content grows and pushes Footer down */}
+        <main className="flex-grow">
+          <Routes>
+            <Route path='/' element={<Herosection />} />
+            <Route path='/herosection' element={<Herosection />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/pro' element={<Projects />} />
+            <Route path='/services' element={<Services />} />
+          </Routes>
+        </main>
+
+        <Footer />
+      </BrowserRouter>
+    </div>
+  );
 }
 
-export default App
+export default App;
