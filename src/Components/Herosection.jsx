@@ -60,7 +60,9 @@ function Herosection() {
     <div className="w-full bg-white text-black flex flex-col items-center justify-center">
 
       {/* HERO SECTION */}
-      <div className="relative w-full min-h-[90vh] bg-cover bg-center flex items-center justify-center px-4 sm:px-8 md:px-12" style={{ backgroundImage: `url(${img})` }}>
+      <div className="relative w-full min-h-[90vh]
+       bg-cover bg-center flex items-center justify-center px-4 sm:px-8 md:px-12"
+      style={{ backgroundImage: `url(${img})` }}>
         <div className="absolute inset-0 bg-black/60"></div>
 
         <div className="relative z-10 text-center max-w-4xl w-full mt-12 sm:mt-16 md:mt-20 px-4 ">
@@ -86,20 +88,26 @@ function Herosection() {
       </div>
 
       {/* WHO WE ARE */}
-      <section className="w-full max-w-7xl px-4 sm:px-8 md:px-10 py-14 sm:py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <section className="w-[90%] max-w-7xl px-4 
+      sm:px-8 md:px-10 py-14 sm:py-20 grid grid-cols-1 lg:grid-cols-2 
+      gap-10 items-center">
         <div className="text-gray-800 p-6 sm:p-8 lg:p-10">
-          <h2 data-aos='fade-in' className="text-2xl sm:text-3xl lg:text-5xl font-semibold font-serif text-rose-500">Who We Are?</h2>
+          <h2 data-aos='fade-in' className="text-4xl sm:text-3xl lg:text-5xl
+           font-semibold font-serif text-rose-500">Who We Are?</h2>
           <p className="mt-5 text-sm sm:text-base leading-relaxed font-semibold">
             Founded in 2005, we are architects, designers, engineers, and project managers
              with decades of combined experience in residential, commercial, and hospitality projects. 
              We bring excellence, creativity, and precision to every project.
           </p>
         </div>
-        <div id="bg-cover" className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-full h-64 sm:h-80 md:h-[420px] bg-cover bg-center rounded-3xl mx-auto shadow-2xl" style={{ backgroundImage: `url(${img})` }}></div>
+        <div id="bg-cover" className="w-full max-w-md sm:max-w-lg 
+        md:max-w-xl lg:max-w-full h-64 sm:h-80 md:h-[420px] bg-cover bg-center
+         rounded-3xl mx-auto shadow-2xl" style={{ backgroundImage: `url(${img})` }}></div>
       </section>
 
       {/* WHY CHOOSE US - Desktop */}
-      <section className="hidden sm:grid w-full max-w-7xl px-4 sm:px-8 md:px-10 py-14 sm:py-20 grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <section className="hidden sm:grid w-full max-w-7xl px-4
+       sm:px-8 md:px-10 py-10 sm:py-20 grid-cols-1 lg:grid-cols-2 gap-10  items-center">
         <div id="bg-cover" className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-full h-64 sm:h-80 md:h-[420px] bg-cover bg-center rounded-3xl mx-auto shadow-2xl" style={{ backgroundImage: `url(${img1})` }}></div>
         <div className="text-gray-800 rounded-2xl p-6 sm:p-8 lg:p-10">
           <h2 data-aos='fade-in' className="text-2xl sm:text-3xl lg:text-5xl font-semibold font-serif bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500">Why Choose Us</h2>
@@ -115,10 +123,13 @@ function Herosection() {
       </section>
 
       {/* WHY CHOOSE US - Mobile */}
-      <section className="lg:hidden grid w-full max-w-7xl px-4 sm:px-8 md:px-10 py-14 sm:py-20 grid-cols-1 gap-10 items-center">
+      <section className="lg:hidden grid w-full max-w-7xl px-4
+       sm:px-8 md:px-10  sm:py-20 grid-cols-1 gap-10 items-center">
         <div className="text-gray-800 rounded-2xl p-6 sm:p-8 lg:p-10">
-          <h2 data-aos='fade-in' className="text-2xl sm:text-3xl lg:text-5xl font-semibold font-serif bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500">Why Choose Us</h2>
-          <ul className='list-disc ml-5 mt-5 text-sm sm:text-base leading-relaxed'>
+          <h2 data-aos='fade-in' className="text-4xl sm:text-3xl lg:text-5xl 
+          font-semibold font-serif bg-clip-text text-transparent px-6
+           bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500">Why Choose Us</h2>
+          <ul className='list-disc px-8 mt-5 text-sm sm:text-base leading-relaxed'>
             <li>End-to-end project management</li>
             <li>Transparent communication</li>
             <li>Balanced aesthetics and functionality</li>
@@ -127,13 +138,19 @@ function Herosection() {
             <li>Your space reflects your story—we help you tell it beautifully</li>
           </ul>
         </div>
-        <div id="bg-cover" className="w-full max-w-md sm:max-w-lg md:max-w-xl h-64 sm:h-80 md:h-[420px] bg-cover bg-center rounded-3xl mx-auto shadow-2xl mt-6" style={{ backgroundImage: `url(${img1})` }}></div>
+        <div id="bg-cover" className="w-[90%] max-w-md sm:max-w-lg
+         md:max-w-xl h-64 sm:h-80 md:h-[420px] bg-cover bg-center
+        rounded-3xl mx-auto shadow-2xl mt-6" style={{ backgroundImage: `url(${img1})` }}>
+          </div>
       </section>
 
       {/* ABOUT US */}
-      <div className="w-full max-w-5xl mx-auto px-4 sm:px-8 flex items-center justify-center md:px-12 py-12 my-10">
-        <div className="bg-zinc-100 bg-opacity-90 lg:w-[70%] rounded-3xl shadow-xl  p-6 sm:p-10 text-gray-800">
-          <h2 ref={headingRef} className="text-2xl sm:text-3xl lg:text-4xl font-serif font-semibold text-center text-rose-500 mb-6">About Us</h2>
+      <div className="w-full max-w-5xl mx-auto px-4 
+      sm:px-8 flex items-center justify-center md:px-12 py-12 my-10">
+        <div className="bg-zinc-100 bg-opacity-90 w-[70%] lg:w-[90%] sm:w-[70%]
+        rounded-3xl shadow-xl  p-6 sm:p-10 text-gray-800">
+          <h2 ref={headingRef} className="text-2xl sm:text-3xl lg:text-4xl
+           font-serif font-semibold text-center text-rose-500 mb-6">About Us</h2>
           <p className="text-sm sm:text-base lg:text-lg font-serif leading-relaxed">
             At <span className="font-bold text-black">Arch Complete Solution</span>, we’re passionate about designing inspiring environments. From cozy homes to cutting-edge offices, we focus on excellence, elegance, and function—crafted with creativity and care.
           </p>
@@ -146,7 +163,7 @@ function Herosection() {
        {/* videos */}
 
              {/* VIDEOS SECTION */}
-              <div className="w-full max-w-6xl mx-auto px-4 sm:px-8 md:px-12 
+              <div className="w-[90%] max-w-6xl mx-auto px-4 sm:px-8 md:px-12 
               py-12 grid grid-cols-1 md:grid-cols-2 gap-8">
                 <video
                   src="/assets/project/about1.MOV"  // Use .mp4 for better browser support
@@ -171,7 +188,7 @@ function Herosection() {
 
   {/* Project Box */}
   <div className="flex justify-center">
-    <Link to="/pro" className="w-full max-w-[500px]">
+    <Link to="/pro" className="w-[90%] max-w-[500px]">
       <div className="bg-zinc-100 bg-opacity-90 py-20
        hover:scale-105 transition-transform duration-300 cursor-pointer
         rounded-3xl shadow-xl p-6 sm:p-10 text-gray-800 w-full">

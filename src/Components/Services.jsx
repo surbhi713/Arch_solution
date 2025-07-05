@@ -31,7 +31,9 @@ function Services() {
   }, []);
 
   return (
-    <div className="bg-gray-50 min-h-screen w-full flex flex-col mb-10 px-6 py-10 text-center space-y-6 items-center justify-center">
+    <div className="bg-gray-50 min-h-screen w-full
+     flex flex-col mb-10 px-6 py-10 text-center space-y-6 items-center
+    justify-center">
 
       {/* Heading & Description */}
       <div className="bg-white p-10 rounded-2xl mt-10 shadow-md w-full max-w-4xl border border-indigo-100">

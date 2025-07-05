@@ -8,7 +8,7 @@ function Footer() {
         
         {/* Left Side - Copyright */}
         <p className="text-sm text-zinc-400 text-center md:text-left">
-          © 2025 All Rights Reserved 
+          Copyright © 2025 All Rights Reserved Arch Complete Solution
         </p>
 
         {/* Right Side - Navigation Links */}
